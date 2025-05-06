@@ -15,7 +15,7 @@
   <!-- profile sec -->
 
   <div class="main-sec">
-    <div class="child left-sec">left</div>
+    <div class="child left-sec"></div>
     <div class="child right-sec"></div>
     <div class="child profile-sec">
       <div class="profile-img-sec">
@@ -34,7 +34,7 @@
           <div class="see-pro-btn f-15">
             See Projects <span class="material-symbols-outlined"> east </span>
           </div>
-          <span class="f-15">Download Resume</span>
+          <span class="f-15 download">Download Resume</span>
         </div>
       </div>
     </div>
@@ -43,37 +43,68 @@
   <!-- skill sec -->
 
   <div class="skills-main-sec">
-    <div class="skills-left-sec">1</div>
+    <div class="skills-left-sec"></div>
     <div class="skills-right-sec">
       <div class="skills-card">
         <div class="each-skills">
           <div class="inside-circle"></div>
-          <div class="outside-circle">outside</div>
+          <div class="outside-circle">
+            <img
+              src="assets/images/angular.png"
+              style="width: -webkit-fill-available"
+            />
+          </div>
           <span class="mr-t"> Angular </span>
         </div>
         <div class="each-skills">
           <div class="inside-circle"></div>
-          <div class="outside-circle">outside</div>
+
+          <div class="outside-circle">
+            <img
+              src="assets/images/nodejs.png"
+              style="width: -webkit-fill-available"
+            />
+          </div>
           <span class="mr-t">Nodejs</span>
         </div>
         <div class="each-skills">
           <div class="inside-circle"></div>
-          <div class="outside-circle">outside</div>
+          <div class="outside-circle">
+            <img
+              src="assets/images/js.png"
+              style="width: -webkit-fill-available"
+            />
+          </div>
           <span class="mr-t">Javascript</span>
         </div>
         <div class="each-skills">
           <div class="inside-circle"></div>
-          <div class="outside-circle">outside</div>
+          <div class="outside-circle">
+            <img
+              src="assets/images/typescript.png"
+              style="width: -webkit-fill-available"
+            />
+          </div>
           <span class="mr-t">Typescript</span>
         </div>
         <div class="each-skills">
           <div class="inside-circle"></div>
-          <div class="outside-circle">outside</div>
+          <div class="outside-circle">
+            <img
+              src="assets/images/mysql.png"
+              style="width: -webkit-fill-available"
+            />
+          </div>
           <span class="mr-t">Mysql</span>
         </div>
         <div class="each-skills">
           <div class="inside-circle"></div>
-          <div class="outside-circle">outside</div>
+          <div class="outside-circle">
+            <img
+              src="assets/images/social.png"
+              style="width: -webkit-fill-available"
+            />
+          </div>
           <span class="mr-t">Git</span>
         </div>
       </div>
@@ -100,7 +131,7 @@
             <div class="each-btn">
               <span class="f-15">{{ item.btn1 }}</span>
             </div>
-            <div class="each-btn">
+            <div class="each-btn1">
               <span class="f-15">{{ item.btn2 }}</span>
             </div>
           </div>
@@ -112,7 +143,7 @@
   <!-- About sec -->
 
   <div class="about-card">
-    <div class="projects-heading">
+    <div class="projects-heading pt-40">
       <span class="recent"> Get To Know More </span>
       <span class="projects">About Me</span>
     </div>
@@ -132,7 +163,7 @@
         <span>B.Sc. Bachelors Degree</span>
       </div>
     </div>
-    <div>
+    <div class="about-text">
       <span class="f-17">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic quis
         reprehenderit et laborum, rem, dolore eum quod voluptate exercitationem
@@ -182,7 +213,7 @@
   <!-- contact sec -->
 
   <div class="contact-sec">
-    <div class="projects-heading">
+    <div class="projects-heading pt-40">
       <span class="recent"> Get in Touch </span>
       <span class="projects">Contact Me</span>
     </div>
@@ -191,44 +222,56 @@
         <span class="contact-heading">Get In Touch</span>
       </div>
       <div class="both-sec">
-        <div class="form-sec">
-          <div>
-            <mat-form-field appearance="outline" style="width: 48%">
-              <mat-label>Outline form field</mat-label>
-              <input matInput placeholder="Placeholder" />
-            </mat-form-field>
-            <mat-form-field appearance="outline" style="width: 48%">
-              <mat-label>Outline form field</mat-label>
-              <input matInput placeholder="Placeholder" />
-            </mat-form-field>
-            <mat-form-field appearance="outline" style="width: 100%">
-              <mat-label>Outline form field</mat-label>
-              <textarea matInput></textarea>
-            </mat-form-field>
-          </div>
-
-          <div>Send</div>
-        </div>
         <div>
           <div>
-            <span class="material-symbols-outlined"> location_on </span>
-            <div>
-              <span>Location</span>
-              <span>Chennai</span>
+            <div style="display: flex; gap: 16px">
+              <mat-form-field appearance="outline" class="small">
+                <mat-label>Outline form field</mat-label>
+                <input matInput placeholder="Placeholder" />
+              </mat-form-field>
+              <mat-form-field appearance="outline" class="small">
+                <mat-label>Outline form field</mat-label>
+                <input matInput placeholder="Placeholder" />
+              </mat-form-field>
+            </div>
+
+            <mat-form-field
+              appearance="outline"
+              class="small"
+              style="width: 100%"
+            >
+              <mat-label>Outline form field</mat-label>
+              <textarea matInput rows="4"></textarea>
+            </mat-form-field>
+          </div>
+          <div class="send-btn">Send</div>
+        </div>
+        <div class="contact-icon-sec">
+          <div class="icons-sec">
+            <span class="material-symbols-outlined right-side-icon">
+              location_on
+            </span>
+            <div class="right-side-text">
+              <span class="first-text">Location</span>
+              <span class="sub-text">Chennai</span>
             </div>
           </div>
-          <div>
-            <span class="material-symbols-outlined"> call </span>
-            <div>
-              <span>Phone</span>
-              <span> 9076556765 </span>
+          <div class="icons-sec">
+            <span class="material-symbols-outlined right-side-icon">
+              call
+            </span>
+            <div class="right-side-text">
+              <span class="first-text">Phone</span>
+              <span class="sub-text"> 9076556765 </span>
             </div>
           </div>
-          <div>
-            <span class="material-symbols-outlined"> mail </span>
-            <div>
-              <span>Email</span>
-              <span>"ashina1999.com"</span>
+          <div class="icons-sec">
+            <span class="material-symbols-outlined right-side-icon">
+              mail
+            </span>
+            <div class="right-side-text">
+              <span class="first-text">Email</span>
+              <span class="sub-text">ashina1999.com</span>
             </div>
           </div>
         </div>

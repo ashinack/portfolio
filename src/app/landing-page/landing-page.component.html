@@ -1,0 +1,241 @@
+<div class="main-card">
+  <div class="first-sec">
+    <div class="left-sec"></div>
+    <div class="right-sec">
+      <mat-toolbar class="nav-bar">
+        <span>Home</span>
+        <span>Projects</span>
+        <span>About</span>
+        <span>Content</span>
+        <span class="material-symbols-outlined"> dark_mode </span>
+      </mat-toolbar>
+      <div></div>
+    </div>
+  </div>
+  <!-- profile sec -->
+
+  <div class="main-sec">
+    <div class="child left-sec">left</div>
+    <div class="child right-sec"></div>
+    <div class="child profile-sec">
+      <div class="profile-img-sec">
+        <img src="assets/images/girl.jpg" class="image" />
+      </div>
+      <div class="details-sec">
+        <span class="heading"
+          >I'm <span class="heading name">Ashina</span></span
+        >
+        <span class="heading">Full Stack Developer</span>
+        <span class="f-15 line-height"
+          >Draft is a revolutionary mobile app built to help you manage your
+          business easily and save your money.</span
+        >
+        <div class="click-btn-sec">
+          <div class="see-pro-btn f-15">
+            See Projects <span class="material-symbols-outlined"> east </span>
+          </div>
+          <span class="f-15">Download Resume</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- skill sec -->
+
+  <div class="skills-main-sec">
+    <div class="skills-left-sec">1</div>
+    <div class="skills-right-sec">
+      <div class="skills-card">
+        <div class="each-skills">
+          <div class="inside-circle"></div>
+          <div class="outside-circle">outside</div>
+          <span class="mr-t"> Angular </span>
+        </div>
+        <div class="each-skills">
+          <div class="inside-circle"></div>
+          <div class="outside-circle">outside</div>
+          <span class="mr-t">Nodejs</span>
+        </div>
+        <div class="each-skills">
+          <div class="inside-circle"></div>
+          <div class="outside-circle">outside</div>
+          <span class="mr-t">Javascript</span>
+        </div>
+        <div class="each-skills">
+          <div class="inside-circle"></div>
+          <div class="outside-circle">outside</div>
+          <span class="mr-t">Typescript</span>
+        </div>
+        <div class="each-skills">
+          <div class="inside-circle"></div>
+          <div class="outside-circle">outside</div>
+          <span class="mr-t">Mysql</span>
+        </div>
+        <div class="each-skills">
+          <div class="inside-circle"></div>
+          <div class="outside-circle">outside</div>
+          <span class="mr-t">Git</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- projects sec -->
+
+  <div class="projects-sec">
+    <div class="projects-heading">
+      <span class="recent">Browse My Recent</span>
+      <span class="projects">Projects</span>
+    </div>
+    <div class="project-cards">
+      @for (item of projects; track $index) {
+      <div class="each-project">
+        <div class="w-100 proj-img-sec">
+          <img [src]="item.image" class="project-img" />
+        </div>
+        <div class="down-sec">
+          <span class="project-name">{{ item.projectName }}</span>
+
+          <div class="projects-btn-sec">
+            <div class="each-btn">
+              <span class="f-15">{{ item.btn1 }}</span>
+            </div>
+            <div class="each-btn">
+              <span class="f-15">{{ item.btn2 }}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      }
+    </div>
+  </div>
+  <!-- About sec -->
+
+  <div class="about-card">
+    <div class="projects-heading">
+      <span class="recent"> Get To Know More </span>
+      <span class="projects">About Me</span>
+    </div>
+    <div class="about-card-sec-2">
+      <div class="exp">
+        <span class="material-symbols-outlined project-name">
+          workspace_premium
+        </span>
+
+        <span class="project-name">Experience</span>
+        <span>2+ years</span>
+        <span>Full Stack Developer</span>
+      </div>
+      <div class="exp">
+        <span class="material-symbols-outlined project-name"> school </span>
+        <span class="project-name">Education</span>
+        <span>B.Sc. Bachelors Degree</span>
+      </div>
+    </div>
+    <div>
+      <span class="f-17">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic quis
+        reprehenderit et laborum, rem, dolore eum quod voluptate exercitationem
+        nobis, nihil esse debitis maxime facere minus sint delectus velit in eos
+        quo officiis explicabo deleniti dignissimos. Eligendi illum libero
+        dolorum cum laboriosam corrupti quidem, reiciendis ea magnam? Nulla,
+        impedit fuga!
+      </span>
+    </div>
+  </div>
+
+  <!-- service sec -->
+  <div class="service-sec">
+    <div class="projects-heading">
+      <span class="recent"> Get To Know More </span>
+      <span class="projects">Services</span>
+    </div>
+    <div class="service-cards">
+      @for (item of services; track $index) {
+      <div class="each-services">
+        <div>
+          <span class="material-symbols-outlined service-icons">
+            {{ item.icon }}
+          </span>
+          <!-- <img [src]="item.icon" class="service-img" /> -->
+        </div>
+        <div>
+          <span class="service-heading">{{ item.heading }}</span>
+        </div>
+        <div class="view-more-action">
+          <p class="text-color view-more-text">
+            View More
+            <span class="material-symbols-outlined text-color">
+              arrow_right_alt
+            </span>
+          </p>
+        </div>
+
+        <!-- <div>
+          <span class="f-15">{{ item.subHeading }}</span>
+        </div> -->
+      </div>
+      }
+    </div>
+  </div>
+
+  <!-- contact sec -->
+
+  <div class="contact-sec">
+    <div class="projects-heading">
+      <span class="recent"> Get in Touch </span>
+      <span class="projects">Contact Me</span>
+    </div>
+    <div class="contact-form-card">
+      <div>
+        <span class="contact-heading">Get In Touch</span>
+      </div>
+      <div class="both-sec">
+        <div class="form-sec">
+          <div>
+            <mat-form-field appearance="outline" style="width: 48%">
+              <mat-label>Outline form field</mat-label>
+              <input matInput placeholder="Placeholder" />
+            </mat-form-field>
+            <mat-form-field appearance="outline" style="width: 48%">
+              <mat-label>Outline form field</mat-label>
+              <input matInput placeholder="Placeholder" />
+            </mat-form-field>
+            <mat-form-field appearance="outline" style="width: 100%">
+              <mat-label>Outline form field</mat-label>
+              <textarea matInput></textarea>
+            </mat-form-field>
+          </div>
+
+          <div>Send</div>
+        </div>
+        <div>
+          <div>
+            <span class="material-symbols-outlined"> location_on </span>
+            <div>
+              <span>Location</span>
+              <span>Chennai</span>
+            </div>
+          </div>
+          <div>
+            <span class="material-symbols-outlined"> call </span>
+            <div>
+              <span>Phone</span>
+              <span> 9076556765 </span>
+            </div>
+          </div>
+          <div>
+            <span class="material-symbols-outlined"> mail </span>
+            <div>
+              <span>Email</span>
+              <span>"ashina1999.com"</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- <div>
+  <div class="glassy">galssy efftec</div>
+</div> -->

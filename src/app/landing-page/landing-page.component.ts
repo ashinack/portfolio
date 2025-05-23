@@ -5,6 +5,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { CommonModule } from '@angular/common';
 import { MatInputModule } from '@angular/material/input';
+import { ActivatedRoute, RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-landing-page',
@@ -16,11 +17,13 @@ import { MatInputModule } from '@angular/material/input';
     MatFormFieldModule,
     CommonModule,
     MatInputModule,
+    RouterModule,
   ],
   templateUrl: './landing-page.component.html',
   styleUrl: './landing-page.component.css',
 })
 export class LandingPageComponent {
+  constructor(private activatedRoute: ActivatedRoute) {}
   projects: any = [
     {
       projectName: 'project 1',

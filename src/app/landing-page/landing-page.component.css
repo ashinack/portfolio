@@ -6,6 +6,7 @@
   justify-content: end;
   gap: 50px;
   background: white;
+  cursor: pointer;
 }
 .first-sec {
   width: 100%;
@@ -171,6 +172,8 @@
   align-items: center;
   justify-content: center;
   color: white;
+  transition: all 0.5s ease;
+  /* opacity: 0; */
 }
 
 .inside-circle {
@@ -226,7 +229,7 @@
   flex-direction: column;
   /* padding-top: 25px; */
   gap: 40px;
-  margin-top: 80px;
+  padding-top: 80px;
 }
 .projects-heading {
   width: 100%;
@@ -245,13 +248,14 @@
 }
 .project-cards {
   display: flex;
-  gap: 30px;
+  gap: 50px;
   padding-top: 25px;
   align-items: center;
   justify-content: center;
 }
 .each-project {
   border-radius: 30px;
+  transition: all 0.3s ease;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
 .down-sec {
@@ -283,7 +287,7 @@
 }
 .about-card {
   background: #a6bcfa;
-  margin-top: 80px;
+  /* margin-top: 80px; */
   display: flex;
   flex-direction: column;
   gap: 40px;
@@ -316,7 +320,7 @@
   font-size: 17px;
 }
 .service-sec {
-  margin-top: 80px;
+  padding-top: 80px;
   display: flex;
   flex-wrap: wrap;
   gap: 40px;
@@ -368,12 +372,14 @@
 .contact-sec {
   background: #a6bcfa;
   width: 100%;
-  margin-top: 80px;
+
   display: flex;
   flex-wrap: wrap;
   gap: 40px;
   justify-content: center;
   padding: 0 0 40px 0;
+  /* margin-left: 20px;
+  margin-right: 20px; */
 }
 .contact-form-card {
   background: white;
@@ -452,4 +458,47 @@ mat-label {
 }
 .about-text {
   padding: 0px 26px 0 26px;
+}
+a {
+  text-decoration: none !important;
+  color: black !important;
+}
+
+.zoom-in {
+  cursor: zoom-in;
+}
+.zoom-in:hover {
+  transform: scale(1.15);
+}
+
+.holographic-card:hover {
+  transform: scale(1.05);
+  /* box-shadow: 0 0 20px rgba(0, 255, 255, 0.5); */
+  box-shadow: 0 6px 15px rgba(220, 227, 255, 0.7),
+    /* light outer glow */ 0 12px 24px rgba(161, 173, 230, 0.5),
+    /* mid glow */ 0 18px 36px rgba(172, 180, 226, 0.35);
+}
+.social-images {
+  width: 50px;
+  height: 50px;
+}
+.social-secs {
+  width: fit-content;
+  background: aqua;
+  /* padding: 31px; */
+  padding: 20px 10px 10px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 150px;
+}
+.copy {
+  cursor: copy;
+  /* background: linear-gradient(145deg, #2a2a2a, #383838); */
+  /* border: 2px solid #cddc39; */
+}
+.copy:hover {
+  transform: scale(1.05);
+  box-shadow: 5px 5px 0 #a6bcfa;
 }

@@ -3,10 +3,13 @@
     <div class="left-sec"></div>
     <div class="right-sec">
       <mat-toolbar class="nav-bar">
-        <span>Home</span>
-        <span>Projects</span>
-        <span>About</span>
-        <span>Content</span>
+        <span [routerLink]="['/']" fragment="home">Home</span>
+
+        <span [routerLink]="['/']" fragment="projects"> Projects </span>
+        <span [routerLink]="['/']" fragment="about">About</span>
+        <span [routerLink]="['/']" fragment="services">Services</span>
+
+        <span [routerLink]="['/']" fragment="contact">Content</span>
         <span class="material-symbols-outlined"> dark_mode </span>
       </mat-toolbar>
       <div></div>
@@ -14,7 +17,7 @@
   </div>
   <!-- profile sec -->
 
-  <div class="main-sec">
+  <div class="main-sec" id="home">
     <div class="child left-sec"></div>
     <div class="child right-sec"></div>
     <div class="child profile-sec">
@@ -46,7 +49,7 @@
     <div class="skills-left-sec"></div>
     <div class="skills-right-sec">
       <div class="skills-card">
-        <div class="each-skills">
+        <div class="each-skills holographic-card">
           <div class="inside-circle"></div>
           <div class="outside-circle">
             <img
@@ -56,7 +59,7 @@
           </div>
           <span class="mr-t"> Angular </span>
         </div>
-        <div class="each-skills">
+        <div class="each-skills holographic-card">
           <div class="inside-circle"></div>
 
           <div class="outside-circle">
@@ -67,7 +70,7 @@
           </div>
           <span class="mr-t">Nodejs</span>
         </div>
-        <div class="each-skills">
+        <div class="each-skills holographic-card">
           <div class="inside-circle"></div>
           <div class="outside-circle">
             <img
@@ -77,7 +80,7 @@
           </div>
           <span class="mr-t">Javascript</span>
         </div>
-        <div class="each-skills">
+        <div class="each-skills holographic-card">
           <div class="inside-circle"></div>
           <div class="outside-circle">
             <img
@@ -87,7 +90,7 @@
           </div>
           <span class="mr-t">Typescript</span>
         </div>
-        <div class="each-skills">
+        <div class="each-skills holographic-card">
           <div class="inside-circle"></div>
           <div class="outside-circle">
             <img
@@ -97,7 +100,7 @@
           </div>
           <span class="mr-t">Mysql</span>
         </div>
-        <div class="each-skills">
+        <div class="each-skills holographic-card">
           <div class="inside-circle"></div>
           <div class="outside-circle">
             <img
@@ -113,14 +116,14 @@
 
   <!-- projects sec -->
 
-  <div class="projects-sec">
+  <div class="projects-sec" id="projects">
     <div class="projects-heading">
       <span class="recent">Browse My Recent</span>
       <span class="projects">Projects</span>
     </div>
     <div class="project-cards">
       @for (item of projects; track $index) {
-      <div class="each-project">
+      <div class="each-project zoom-in">
         <div class="w-100 proj-img-sec">
           <img [src]="item.image" class="project-img" />
         </div>
@@ -141,49 +144,50 @@
     </div>
   </div>
   <!-- About sec -->
+  <div style="padding-top: 80px" id="about">
+    <div class="about-card">
+      <div class="projects-heading pt-40">
+        <span class="recent"> Get To Know More </span>
+        <span class="projects">About Me</span>
+      </div>
+      <div class="about-card-sec-2">
+        <div class="exp">
+          <span class="material-symbols-outlined project-name">
+            workspace_premium
+          </span>
 
-  <div class="about-card">
-    <div class="projects-heading pt-40">
-      <span class="recent"> Get To Know More </span>
-      <span class="projects">About Me</span>
-    </div>
-    <div class="about-card-sec-2">
-      <div class="exp">
-        <span class="material-symbols-outlined project-name">
-          workspace_premium
+          <span class="project-name">Experience</span>
+          <span>2+ years</span>
+          <span>Full Stack Developer</span>
+        </div>
+        <div class="exp">
+          <span class="material-symbols-outlined project-name"> school </span>
+          <span class="project-name">Education</span>
+          <span>B.Sc. Bachelors Degree</span>
+        </div>
+      </div>
+      <div class="about-text">
+        <span class="f-17">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic quis
+          reprehenderit et laborum, rem, dolore eum quod voluptate
+          exercitationem nobis, nihil esse debitis maxime facere minus sint
+          delectus velit in eos quo officiis explicabo deleniti dignissimos.
+          Eligendi illum libero dolorum cum laboriosam corrupti quidem,
+          reiciendis ea magnam? Nulla, impedit fuga!
         </span>
-
-        <span class="project-name">Experience</span>
-        <span>2+ years</span>
-        <span>Full Stack Developer</span>
       </div>
-      <div class="exp">
-        <span class="material-symbols-outlined project-name"> school </span>
-        <span class="project-name">Education</span>
-        <span>B.Sc. Bachelors Degree</span>
-      </div>
-    </div>
-    <div class="about-text">
-      <span class="f-17">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic quis
-        reprehenderit et laborum, rem, dolore eum quod voluptate exercitationem
-        nobis, nihil esse debitis maxime facere minus sint delectus velit in eos
-        quo officiis explicabo deleniti dignissimos. Eligendi illum libero
-        dolorum cum laboriosam corrupti quidem, reiciendis ea magnam? Nulla,
-        impedit fuga!
-      </span>
     </div>
   </div>
 
   <!-- service sec -->
-  <div class="service-sec">
+  <div class="service-sec" id="services">
     <div class="projects-heading">
       <span class="recent"> Get To Know More </span>
       <span class="projects">Services</span>
     </div>
     <div class="service-cards">
       @for (item of services; track $index) {
-      <div class="each-services">
+      <div class="each-services copy">
         <div>
           <span class="material-symbols-outlined service-icons">
             {{ item.icon }}
@@ -211,72 +215,84 @@
   </div>
 
   <!-- contact sec -->
-
-  <div class="contact-sec">
-    <div class="projects-heading pt-40">
-      <span class="recent"> Get in Touch </span>
-      <span class="projects">Contact Me</span>
-    </div>
-    <div class="contact-form-card">
-      <div>
-        <span class="contact-heading">Get In Touch</span>
+  <div style="padding-top: 80px" id="contact">
+    <div class="contact-sec">
+      <div class="projects-heading pt-40">
+        <span class="recent"> Get in Touch </span>
+        <span class="projects">Contact Me</span>
       </div>
-      <div class="both-sec">
+      <div class="contact-form-card">
         <div>
-          <div>
-            <div style="display: flex; gap: 16px">
-              <mat-form-field appearance="outline" class="small">
-                <mat-label>Outline form field</mat-label>
-                <input matInput placeholder="Placeholder" />
-              </mat-form-field>
-              <mat-form-field appearance="outline" class="small">
-                <mat-label>Outline form field</mat-label>
-                <input matInput placeholder="Placeholder" />
-              </mat-form-field>
-            </div>
-
-            <mat-form-field
-              appearance="outline"
-              class="small"
-              style="width: 100%"
-            >
-              <mat-label>Outline form field</mat-label>
-              <textarea matInput rows="4"></textarea>
-            </mat-form-field>
-          </div>
-          <div class="send-btn">Send</div>
+          <span class="contact-heading">Get In Touch</span>
         </div>
-        <div class="contact-icon-sec">
-          <div class="icons-sec">
-            <span class="material-symbols-outlined right-side-icon">
-              location_on
-            </span>
-            <div class="right-side-text">
-              <span class="first-text">Location</span>
-              <span class="sub-text">Chennai</span>
+        <div class="both-sec">
+          <div>
+            <div>
+              <div style="display: flex; gap: 16px">
+                <mat-form-field appearance="outline" class="small">
+                  <mat-label>Outline form field</mat-label>
+                  <input matInput placeholder="Placeholder" />
+                </mat-form-field>
+                <mat-form-field appearance="outline" class="small">
+                  <mat-label>Outline form field</mat-label>
+                  <input matInput placeholder="Placeholder" />
+                </mat-form-field>
+              </div>
+
+              <mat-form-field
+                appearance="outline"
+                class="small"
+                style="width: 100%"
+              >
+                <mat-label>Outline form field</mat-label>
+                <textarea matInput rows="4"></textarea>
+              </mat-form-field>
             </div>
+            <div class="send-btn">Send</div>
           </div>
-          <div class="icons-sec">
-            <span class="material-symbols-outlined right-side-icon">
-              call
-            </span>
-            <div class="right-side-text">
-              <span class="first-text">Phone</span>
-              <span class="sub-text"> 9076556765 </span>
+          <div class="contact-icon-sec">
+            <div class="icons-sec">
+              <span class="material-symbols-outlined right-side-icon">
+                location_on
+              </span>
+              <div class="right-side-text">
+                <span class="first-text">Location</span>
+                <span class="sub-text">Chennai</span>
+              </div>
             </div>
-          </div>
-          <div class="icons-sec">
-            <span class="material-symbols-outlined right-side-icon">
-              mail
-            </span>
-            <div class="right-side-text">
-              <span class="first-text">Email</span>
-              <span class="sub-text">ashina1999.com</span>
+            <div class="icons-sec">
+              <span class="material-symbols-outlined right-side-icon">
+                call
+              </span>
+              <div class="right-side-text">
+                <span class="first-text">Phone</span>
+                <span class="sub-text"> 9076556765 </span>
+              </div>
+            </div>
+            <div class="icons-sec">
+              <span class="material-symbols-outlined right-side-icon">
+                mail
+              </span>
+              <div class="right-side-text">
+                <span class="first-text">Email</span>
+                <span class="sub-text">ashina1999.com</span>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
+  </div>
+</div>
+
+<div class="social-medias">
+  <div class="social-secs">
+    <span>LinkedIn</span>
+    <img src="assets/images/linkedin.png" class="social-images" />
+  </div>
+  <div class="social-secs">
+    <span>Github</span>
+    <img src="assets/images/github.png" class="social-images" />
   </div>
 </div>
 <!-- <div>
